@@ -455,14 +455,23 @@ function App() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 0.12 }}
               >
+
                 <div className="portrait-card">
                   <div className="portrait-frame">
                     <img
                         src="/Sumanth_Image.jpeg"
                         alt="Professional portrait of Sumanth Hegde"
                         className="profile-photo"
+                        onLoad={(event) => {
+                          const fallback = event.currentTarget
+                              .nextElementSibling as HTMLElement | null;
+
+                          if (fallback) {
+                            fallback.style.display = 'none';
+                          }
+                        }}
                         onError={(event) => {
-                          event.currentTarget.style.display = 'none'
+                          event.currentTarget.style.display = 'none';
                         }}
                     />
                     <div className="portrait-fallback">
@@ -470,15 +479,17 @@ function App() {
                       <small>Add your professional photo</small>
                     </div>
                   </div>
+
                   <div className="portrait-caption">
                     <div>
                       <strong>Sumanth Hegde</strong>
                       <span>Backend Software Developer</span>
                     </div>
+
                     <span className="portrait-status">
-                    <span className="availability-dot" />
-                    Open to work
-                  </span>
+      <span className="availability-dot" />
+      Open to work
+    </span>
                   </div>
                 </div>
 

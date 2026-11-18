@@ -374,42 +374,92 @@ img {
 }
 
 .portrait-card {
+  position: relative;
   overflow: hidden;
-  border: 1px solid var(--border-bright);
+  border: 1px solid rgba(103, 232, 249, 0.12);
   border-radius: 20px;
-  background: linear-gradient(145deg, #172335, #0d1420);
+
+  background: linear-gradient(
+          145deg,
+          #172335,
+          #0d1420
+  );
+
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
 }
 
 .portrait-frame {
   position: relative;
   display: grid;
+
   min-height: 285px;
-  max-height: 370px;
+  height: 370px;
+
   overflow: hidden;
   place-items: center;
-  background:
-          radial-gradient(circle at 50% 30%, rgba(103, 232, 249, 0.14), transparent 50%),
-          linear-gradient(145deg, #18283b, #0d1420);
-}
 
+  background:
+          radial-gradient(
+                  ellipse at center,
+                  rgba(103, 232, 249, 0.10),
+                  transparent 65%
+          ),
+          linear-gradient(
+                  145deg,
+                  #192a40,
+                  #0d1420
+          );
+}
 
 .profile-photo {
   position: absolute;
   inset: 0;
+  z-index: 1;
+
   width: 100%;
   height: 100%;
+
   object-fit: contain;
   object-position: center center;
-  padding: 12px;
+
+  padding: 0;
   box-sizing: border-box;
+
+  mix-blend-mode: normal;
+  filter: none;
+
+  -webkit-mask-image: radial-gradient(
+          ellipse 48% 65% at 50% 50%,
+          #000 30%,
+          rgba(0, 0, 0, 0.98) 42%,
+          rgba(0, 0, 0, 0.82) 57%,
+          rgba(0, 0, 0, 0.48) 73%,
+          rgba(0, 0, 0, 0.15) 88%,
+          transparent 100%
+  );
+
+  mask-image: radial-gradient(
+          ellipse 48% 65% at 50% 50%,
+          #000 30%,
+          rgba(0, 0, 0, 0.98) 42%,
+          rgba(0, 0, 0, 0.82) 57%,
+          rgba(0, 0, 0, 0.48) 73%,
+          rgba(0, 0, 0, 0.15) 88%,
+          transparent 100%
+  );
 }
 
 .portrait-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+
   color: #b8c7d9;
 }
 
@@ -418,10 +468,13 @@ img {
   width: 100px;
   height: 100px;
   place-items: center;
+
   border: 1px solid rgba(103, 232, 249, 0.35);
   border-radius: 50%;
+
   background: rgba(103, 232, 249, 0.1);
   color: var(--accent);
+
   font-size: 32px;
   font-weight: 800;
 }
@@ -435,6 +488,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+
   padding: 17px 19px;
 }
 
@@ -459,6 +513,7 @@ img {
   flex-shrink: 0;
   align-items: center;
   gap: 7px;
+
   color: #a7f3c1;
   font-size: 10px;
 }
