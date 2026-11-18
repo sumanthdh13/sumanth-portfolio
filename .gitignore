@@ -27,4 +27,6 @@ bin/
 .vscode/
 
 ### Mac OS ###
-.DS_Store
+.DS_Storefrontend/public/Degree_Certificate.pdf
+frontend/public/ergos-experience-relieving-letter.pdf
+/frontend/public/Degree_Certificate.pdf
