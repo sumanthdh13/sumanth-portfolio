@@ -2048,3 +2048,235 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: #3d566f;
 }
+
+/* =====================================================
+   SOCIAL MEDIA
+===================================================== */
+
+.social-intro {
+  max-width: 680px;
+  margin-bottom: 30px;
+  color: #a0aec0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.social-feature-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 30px;
+  padding: 38px;
+  border: 1px solid rgba(103, 232, 249, 0.18);
+  border-radius: 18px;
+  background:
+          radial-gradient(
+                  circle at 90% 15%,
+                  rgba(103, 232, 249, 0.09),
+                  transparent 40%
+          ),
+          linear-gradient(145deg, #142236, #0b111b);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(103, 232, 249, 0.38);
+}
+
+.social-youtube-icon {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  place-items: center;
+  margin-bottom: 20px;
+  border-radius: 13px;
+  background: rgba(255, 0, 0, 0.12);
+  color: #ff4545;
+}
+
+.social-label {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 2px;
+}
+
+.social-feature-content h3 {
+  margin-top: 10px;
+  color: #f1f5f9;
+  font-size: 27px;
+  font-weight: 750;
+}
+
+.social-feature-content > p {
+  margin-top: 9px;
+  color: #a0aec0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.social-feature-content .social-description {
+  max-width: 490px;
+  margin-top: 16px;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.social-youtube-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 12px 17px;
+  border-radius: 8px;
+  background: #e53935;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.social-youtube-button:hover {
+  background: #c62828;
+  transform: translateY(-2px);
+}
+
+.social-youtube-visual {
+  display: flex;
+  min-height: 230px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 22px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  background: rgba(5, 10, 18, 0.45);
+}
+
+.social-channel-logo {
+  width: 115px;
+  height: 115px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-youtube-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.social-youtube-brand-text span {
+  color: #f1f5f9;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.social-youtube-brand-text small {
+  color: #94a3b8;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.social-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.social-link-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 21px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: rgba(15, 23, 36, 0.75);
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.social-link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(103, 232, 249, 0.35);
+}
+
+.social-link-card div {
+  flex: 1;
+}
+
+.social-link-card h4 {
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.social-link-card p {
+  margin-top: 5px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.instagram-card > svg:first-child {
+  color: #e66a9a;
+}
+
+.facebook-card > svg:first-child {
+  color: #4594f5;
+}
+
+@media (max-width: 768px) {
+  .social-feature-card {
+    grid-template-columns: 1fr;
+    padding: 27px;
+  }
+
+  .social-youtube-visual {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-feature-card {
+    padding: 22px;
+  }
+
+  .social-feature-content h3 {
+    font-size: 23px;
+  }
+
+  .social-link-card {
+    padding: 17px;
+  }
+
+  .social-youtube-visual {
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .social-channel-logo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .social-youtube-brand-text span {
+    font-size: 16px;
+  }
+
+  .social-youtube-brand-text small {
+    font-size: 9px;
+  }
+}

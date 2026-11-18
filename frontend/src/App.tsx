@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { ComponentType } from 'react'
 import { motion } from 'framer-motion'
+// @ts-ignore
 import {
   ArrowDown,
   ArrowRight,
@@ -32,6 +33,11 @@ import {
   RefreshCw,
   Blocks,
 } from 'lucide-react'
+import {
+  FaYoutube,
+  FaInstagram,
+  FaFacebook,
+} from 'react-icons/fa'
 
 type IconComponent = ComponentType<{ size?: number; className?: string }>
 
@@ -972,6 +978,102 @@ function App() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* =====================================================
+                       BEYOND CODE - SOCIAL MEDIA
+           ===================================================== */}
+
+          <section
+              className="content-section social-section section-anchor"
+              id="social"
+          >
+            <div className="container">
+              <SectionHeading
+                  eyebrow="BEYOND CODE"
+                  title="My creative side."
+              />
+
+              <p className="social-intro">
+                Apart from software development, I enjoy travelling,
+                exploring nature, discovering beautiful places and
+                sharing experiences through content creation.
+              </p>
+
+              <div className="social-feature-card">
+                <div className="social-feature-content">
+                  <div className="social-youtube-icon">
+                    <FaYoutube size={30} />
+                  </div>
+
+                  <span className="social-label">MY YOUTUBE CHANNEL</span>
+
+                  <h3>Hegde's Jeevana</h3>
+
+                  <p>Travel · Nature · Village Life</p>
+
+                  <p className="social-description">
+                    Sharing travel experiences, beautiful places,
+                    trekking adventures and local stories through
+                    Kannada and English content.
+                  </p>
+
+                  <a
+                      href="https://youtube.com/@sumanthhegde1920"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-youtube-button"
+                  >
+                    <FaYoutube size={17} />
+                    Visit My YouTube Channel
+                    <ExternalLink size={15} />
+                  </a>
+                </div>
+
+                <div className="social-youtube-visual">
+                  <img
+                      src="/hegdes_jeevana.jpeg"
+                      alt="Hegde's Jeevana YouTube Channel Logo"
+                      className="social-channel-logo"
+                  />
+
+                  <div className="social-youtube-brand-text">
+                    <span>Hegde's Jeevana</span>
+                    <small>Explore · Experience · Share</small>
+                  </div>
+                </div>
+              </div>
+
+              <div className="social-links-grid">
+                <a
+                    href="https://www.instagram.com/hegdes_jeevana"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-link-card instagram-card"
+                >
+                  <FaInstagram size={24} />
+                  <div>
+                    <h4>Instagram</h4>
+                    <p>Follow my updates and moments</p>
+                  </div>
+                  <ExternalLink size={16} />
+                </a>
+
+                <a
+                    href="https://www.facebook.com/sumanth.sumanthkuli/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-link-card facebook-card"
+                >
+                  <FaFacebook size={24} />
+                  <div>
+                    <h4>Facebook</h4>
+                    <p>Connect with me</p>
+                  </div>
+                  <ExternalLink size={16} />
+                </a>
               </div>
             </div>
           </section>
